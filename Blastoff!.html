@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<! Zachary Lewis >
+<! Background >
+
+<head>
+<! Title >
+<title>UAT Space Program</title>
+</head>
+
+<style>
+body {
+    background-image:
+ url('wp2555874.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+<body>
+<center>
+
+<! Logo >
+<div class="logo">
+<img src="UATspaceLogo-1.jpg" width="250" height="250"/>
+<img id="myimage" src="https://i.imgur.com/fQfTUKu.gif" style="display:none" width="400" />
+</div>
+
+<div class="name">
+<h1><strong><p style="color:white;">UAT Space Program</p></strong></h1>
+</div>
+<! Starting the Countdown >
+<div class="button">
+<p style="color:white;">Warning: Countdown to Launch.</p>
+<div>
+<p id="Countdown">50</p>
+</div>
+
+
+<script>
+function myFunction() {
+ 
+    var timeleft = 50;
+    var downloadTimer = setInterval(function(){
+        timeleft = timeleft - 1 //timeleft - 5//
+        document.getElementById("Countdown").textContent = timeleft;
+    if(timeleft == 0){
+        clearInterval(downloadTimer);
+        document.getElementById('myimage').style.display = 'block';
+        document.getElementById("Countdown").textContent = "";
+    }else if(timeleft < 25){
+            document.getElementById("Countdown").textContent = "Warning! Less than 25 seconds left to launch! Time left: " + timeleft;
+        }
+    
+        },1000);//1000//
+    document.getElementById("Countdown").style.color = 'white'; document.getElementById("Countdown").style.fontSize = "x-large";
+};
+
+    function stopTime()
+    {
+        clearInterval(downloadTimer);
+        downloadTimer=0;
+    }
+
+</script>
+<form>
+    <input type="button" value="Start Countdown" onclick="myFunction()">
+    
+    <input type="button" value="Stop Countdown" onclick="stopTime()">
+</form>
+</div>
+</center>
+</body>
+</html>    
