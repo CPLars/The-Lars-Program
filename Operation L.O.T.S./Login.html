@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///C:/Users/maste/OneDrive/Desktop/School%20Work/Programming/Login.html -->
+<html>
+    <head>
+  <title>Login</title>
+ <script>
+     function Password() {
+         var n = document.getElementById("name").value 
+         var id = document.getElementById("idnum").value;
+         if(n == ""||id == "") {
+             document.getElementById("errormessage").innerHTML = "Please fill in the blank sections.";
+             return false;
+         }
+         if(n.length < 3) {
+             document.getElementById("errormessage").innerHTML = "Access Denied. Name must be more than 3 characters.";
+             return false;
+         }
+         if(n.length > 20) {
+             document.getElementById("errormessage").innerHTML = "Access Denied. Name must not exceed 20 characters.";
+             return false;
+         } else if(id<100||id>999){
+             document.getElementById("errormessage").innerHTML = "Access Denied. ID must be 3 characters.";
+             return false;
+         }
+         else {
+             alert("Access Granted! Welcome, "+ n);
+         }
+
+     }
+ </script>
+ <style>
+     body {
+         background-image: url("LoginImage.png");
+         background-color: white;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(161, 116, 197));
+          }         
+          li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            padding: 8px 16px;
+            text-decoration: none;
+          }          
+          /* Change the link color on hover */
+          li a:hover {
+            background-color: rgb(59, 8, 94);
+            color: white;
+          }
+ </style></head>
+ 
+ <body>
+    <div id="nav" style="left: 5%; top: 10%; position: absolute">
+    <ul>
+      <li><a href="Index.html">Index</a></li>   
+      <li><a href="">Contact</a></li>
+    </ul>
+    </div>
+    <center>
+     <img src="./Login_files/CryptoLock.png" width="400" height="200">
+     <div class="container">
+         <br>
+         <label for="name">Full Name</label>
+         <input type="text" id="name" name="Name" placeholder="Your Name">
+         <br>
+         <br>
+         <label for="idnum">Valid Badge ID</label>
+         <input type="number" id="idnum" name="BadgeNumber" placeholder="Valid ID">
+         <br>
+     </div>
+     <form onsubmit="return Password()" action="file:///C:/Users/maste/OneDrive/Desktop/School%20Work/Programming/LarsProgram.html">
+        <span id="errormessage" style="color:darkred"></span>
+        <br>
+        <br>
+        <input type="submit" value="Login">
+     </form>
+    </center> 
+</body>
+</html>
