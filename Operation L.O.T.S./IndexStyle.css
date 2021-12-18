@@ -1,0 +1,27 @@
+body {
+    background-image: url("IndexImage.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }  
+#welcome{
+font-weight: bold;
+font-size: large;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-image: linear-gradient(to top right, rgb(101, 116, 255), rgb(89, 48, 202));
+  }  
+  li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: rgb(5, 7, 83);
+    color: white;
+  }
