@@ -1,0 +1,30 @@
+#countdowntimer {
+font-weight: bold;
+    color:white;
+font-display: left=45%;
+}
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+      };
+      #writing{
+          font-display: top= 50%}
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(0, 181, 226));
+          }         
+          li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            padding: 8px 16px;
+            text-decoration: none;
+          }          
+          /* Change the link color on hover */
+          li a:hover {
+            background-color: rgb(5, 22, 97);
+            color: white;
+          }
+      
